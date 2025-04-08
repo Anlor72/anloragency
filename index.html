@@ -98,47 +98,47 @@
         }
         .animation-container {
     display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
+    align-items: center; 
+    justify-content: center; 
     height: 300px;
     background-color: #f0f0f0;
-    overflow: hidden; /* Garantiza que el contenido no se salga */
-    padding: 20px; /* Aumenta el espacio interno del contenedor */
+    overflow: hidden; 
+    padding: 20px; 
 }
 
 .animation-container img {
-    max-width: 400px; /* Reduce significativamente el tamaño de la imagen */
-    height: auto; /* Mantén las proporciones de la imagen */
+    max-width: 400px; 
+    height: auto; 
     border-radius: 12px;
-    margin: auto; /* Elimina cualquier desplazamiento lateral */
+    margin: auto; 
 }
 
 
-/* Media query para pantallas pequeñas (por ejemplo, móviles) */
+
 @media (max-width: 768px) {
     .animation-container {
-        height: auto; /* Ajusta la altura automáticamente para móviles */
-        padding: 15px; /* Agrega un poco de espacio interno */
+        height: auto; 
+        padding: 15px; 
     }
 
     .animation-container img {
-        max-width: 300px; /* Imagen se reduce aún más para móviles */
-        height: auto; /* Mantén las proporciones de la imagen */
-        margin: 0; /* Asegura que no haya márgenes laterales */
+        max-width: 300px;
+        height: auto;
+        margin: 0; 
     }
 }
 
 /* Media query para pantallas medianas (tablets, por ejemplo) */
 @media (max-width: 1024px) {
     .animation-container {
-        height: auto; /* Ajusta la altura para pantallas medianas */
-        padding: 15px; /* Ajusta el padding para tablets */
+        height: auto; 
+        padding: 15px;
     }
 
     .animation-container img {
-        max-width: 350px; /* Reduce el tamaño para tablets */
-        height: auto; /* Mantén proporciones */
-        margin: 0; /* Elimina márgenes laterales innecesarios */
+        max-width: 350px;
+        height: auto; 
+        margin: 0; 
     }
 }
 
@@ -288,46 +288,46 @@
             }
     
         }
-/* Keyframes para el desplazamiento */
+
 @keyframes scrollReels {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%); /* Desplaza por el ancho completo */
+        transform: translateX(-100%); 
     }
 }
 
-/* Estilo base para escritorio */
+
 .reel-container {
     display: flex;
-    justify-content: start; /* Mantiene los reels alineados al inicio */
+    justify-content: start; 
     align-items: center;
-    width: 200%; /* Doble ancho para el bucle */
-    animation: scrollReels 20s linear infinite; /* Animación suave */
-    gap: 30px; /* Espacio reducido entre los reels */
+    width: 200%; 
+    animation: scrollReels 20s linear infinite; 
+    gap: 30px; 
 }
 
 .reel {
-    flex: 0 0 12%; /* Reels más pequeños en escritorio */
-    width: 12vw; /* Reducción general de tamaño */
+    flex: 0 0 12%;
+    width: 12vw; 
     overflow: hidden;
 }
 
 .reel video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajuste para evitar distorsión */
+    object-fit: cover; 
 }
 
-/* Media query para tablets (pantallas medianas) */
+
 @media (max-width: 1024px) {
     .reel-container {
-        gap: 20px; /* Menor espacio entre reels */
+        gap: 20px; 
     }
 
     .reel {
-        flex: 0 0 18%; /* Reels más grandes en tablets */
+        flex: 0 0 18%; 
         width: 18vw;
     }
 
@@ -338,20 +338,20 @@
     }
 }
 
-/* Media query para móviles (pantallas pequeñas) */
+
 @media (max-width: 768px) {
     .reel-container {
-        gap: 15px; /* Ajuste mínimo de espacio entre reels */
+        gap: 15px; 
     }
 
     .reel {
-        flex: 0 0 25%; /* Reels más grandes para móviles */
-        width: 30vw; /* Ajuste ancho total para móviles */
+        flex: 0 0 25%;
+        width: 30vw;
     }
 
     .reel video {
         width: 100%;
-        height: auto; /* Mantén proporciones */
+        height: auto; 
         object-fit: cover;
     }
 }
@@ -359,7 +359,7 @@
 
         .clients {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Para versión móvil */
+    grid-template-columns: repeat(1, 1fr); 
     gap: 20px;
     margin: 50px 20px;
 }
@@ -368,16 +368,16 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    opacity: 0; /* Inicialmente invisible */
-    transform: translateY(30px); /* Ligeramente desplazado hacia abajo */
-    transition: opacity 1s ease, transform 1s ease; /* Animación suave */
+    opacity: 0;
+    transform: translateY(30px); 
+    transition: opacity 1s ease, transform 1s ease; 
 }
 
 .profile-picture {
     width: 100px;
     height: 100px;
-    border-radius: 50%; /* Forma circular */
-    border: 3px solid #0077ff; /* Diseño elegante */
+    border-radius: 50%; 
+    border: 3px solid #0077ff; 
     object-fit: cover;
 }
 
@@ -393,11 +393,11 @@
     color: #777;
 }
 /* Media query para escritorio */
-@media (min-width: 1024px) { /* Ajuste para pantallas grandes */
+@media (min-width: 1024px) {
     .clients {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas para diseño 2x2 */
-        grid-auto-rows: auto; /* Ajusta automáticamente las filas según el contenido */
-        gap: 40px; /* Espacio entre las secciones */
+        grid-template-columns: repeat(2, 1fr); 
+        grid-auto-rows: auto; 
+        gap: 40px; 
     }
 }
 
@@ -713,7 +713,7 @@
             animatedBox.style.opacity = '1';
         }
     });
-// Detectar al hacer scroll y animar los elementos
+
 document.addEventListener("scroll", () => {
     const clients = document.querySelectorAll(".client");
 
@@ -722,30 +722,30 @@ document.addEventListener("scroll", () => {
         if (rect.top < window.innerHeight && !client.classList.contains("animated")) {
             client.style.opacity = "1";
             client.style.transform = "translateY(0)";
-            client.classList.add("animated"); // Evitar repetir animación
+            client.classList.add("animated"); 
             
-            // Animar números
+
             const followersElement = client.querySelector(".followers");
             animateFollowers(followersElement);
         }
     });
 });
 
-// Función para animar el conteo de seguidores
+
 function animateFollowers(element) {
-    const target = parseInt(element.dataset.followers); // Número objetivo
+    const target = parseInt(element.dataset.followers); 
     let count = 0;
 
-    const duration = 1000; // Duración total de la animación en milisegundos
-    const increment = Math.ceil(target / (duration / 30)); // Ajustamos incremento para fluidez
+    const duration = 1000; 
+    const increment = Math.ceil(target / (duration / 30)); 
     const interval = setInterval(() => {
         count += increment;
         if (count >= target) {
-            count = target; // Asegurar que no sobrepase el objetivo
-            clearInterval(interval); // Detener animación
+            count = target; 
+            clearInterval(interval); 
         }
         element.textContent = `${count.toLocaleString()} Followers`;
-    }, 30); // Intervalos más cortos para mayor fluidez
+    }, 30); 
 }
 
 
